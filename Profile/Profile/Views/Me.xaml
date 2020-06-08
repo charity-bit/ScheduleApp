@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:icons="clr-namespace:Profile.Fonts"
+             xmlns:view="clr-namespace:Profile.Views"
+             mc:Ignorable="d"
+             x:Class="Profile.Views.Me"
+             x:Name="RootPage"
+             BackgroundColor="White">
+  <ContentView.Content>
+        <Grid RowSpacing="0" Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Image Source="ProfPic.png" Aspect="Fill" Grid.Row="0" HeightRequest="220"
+                   VerticalOptions="Fill" HorizontalOptions="Fill"/>
+
+
+            <Image HorizontalOptions="Start" VerticalOptions="Start" Margin="10,20">
+                <Image.Source>
+                    <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static icons:Icons.left}" 
+                                     Size="20" />
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image HorizontalOptions="End" VerticalOptions="Start" Margin="10,20" >
+                <Image.Source>
+                    <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static icons:Icons.cog}" 
+                                     Size="20" 
+                                     />
+                </Image.Source>
+            </Image>
+
+
+
+
+            <Label Text="Jennifer Wilson" TextColor="White" FontSize="30"  HorizontalOptions="Start"
+               VerticalOptions="End"/>
+            <BoxView Grid.Row="1" HeightRequest="1" VerticalOptions="Start"
+                     HorizontalOptions="Fill" BackgroundColor="{StaticResource DeepSkyBlue}" />
+
+
+
+
+            <Label Text="Javascript" HorizontalOptions="Start" Grid.Row="1" VerticalOptions="Start" Margin="20,0,0,0"/>
+            <Button  WidthRequest="10"  VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="1"
+                        HeightRequest="10" CornerRadius="5" BackgroundColor="{StaticResource BlueViolet}" Margin="5,5,0,0"/>
+
+            <Button    VerticalOptions="Start" HorizontalOptions="Center"  Grid.Row="1" 
+                        WidthRequest="10" HeightRequest="10" CornerRadius="5" 
+                        BackgroundColor="{StaticResource GreenYellow}"  Margin="0,5,45,0"/>
+            <Label Text="Java" HorizontalOptions="Center"  Grid.Row="1"  />
+
+
+
+
+
+
+
+
+
+
+            <Grid Grid.Row="2" Margin="0,5,0,0" ColumnSpacing="10" HeightRequest="250" VerticalOptions="Start">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Monday" VerticalOptions="Start"/>
+                <BoxView WidthRequest="0.5"  BackgroundColor="Gray" 
+                         VerticalOptions="CenterAndExpand" Grid.Column="0" Margin="0,0,0,40"
+                     HorizontalOptions="Center" HeightRequest="150"/>
+
+                <BoxView WidthRequest="0.5"  BackgroundColor="Gray" 
+                         VerticalOptions="CenterAndExpand" Grid.Column="1" Margin="0,0,0,40"
+                     HorizontalOptions="Center" HeightRequest="130"/>
+                <BoxView WidthRequest="0.5"  BackgroundColor="Gray" 
+                         VerticalOptions="CenterAndExpand" Grid.Column="2" Margin="0,0,0,40"
+                     HorizontalOptions="Center" HeightRequest="170"/>
+                <BoxView WidthRequest="0.5"  BackgroundColor="Gray" 
+                         VerticalOptions="CenterAndExpand" Grid.Column="3" Margin="0,0,0,40"
+                     HorizontalOptions="Center" HeightRequest="100"/>
+                <BoxView WidthRequest="0.5"  BackgroundColor="Gray" 
+                         VerticalOptions="CenterAndExpand" Grid.Column="4" Margin="0,0,0,40"
+                     HorizontalOptions="Center" HeightRequest="160"/>
+
+
+
+
+
+
+
+
+                <Label Text="Tuesday" Grid.Column="1" VerticalOptions="Start"/>
+                <Label Text="Wenesday" Grid.Column="2" VerticalOptions="Start"/>
+                <Label Text="Thursday" Grid.Column="3" VerticalOptions="Start"/>
+                <Label Text="Friday" Grid.Column="4"   VerticalOptions="Start"/>
+
+            </Grid>
+            <Grid Grid.Row="3"  Padding="20">
+
+                <Image HorizontalOptions="End" VerticalOptions="EndAndExpand"   Grid.Column="0" >
+                    <Image.Source>
+                        <FontImageSource FontFamily="{StaticResource Font}"
+                                     Glyph="{x:Static icons:Icons.FaceBook}" 
+                                     Size="25"  Color="Black"
+                                     />
+                    </Image.Source>
+                </Image>
+
+                               <Image HorizontalOptions="End" VerticalOptions="EndAndExpand"  Grid.Column="1">
+                    <Image.Source>
+                        <FontImageSource FontFamily="{StaticResource Font}"  
+                                         Color="Black"
+                                         Glyph="{x:Static icons:Icons.linkedIn}"  Size="25"
+                                         />
+                    </Image.Source>
+                </Image>
+                <Image HorizontalOptions="End" VerticalOptions="EndAndExpand"  Grid.Column="2">
+                    <Image.Source>
+                        <FontImageSource FontFamily="{StaticResource Font}"  
+                                         Color="Black"
+                                         Glyph="{x:Static icons:Icons.Twitter}"  Size="25"
+                                         />
+                    </Image.Source>
+                </Image>
+                <Image HorizontalOptions="End" VerticalOptions="EndAndExpand"  Grid.Column="3">
+                    <Image.Source>
+                        <FontImageSource FontFamily="{StaticResource Font}"  
+                                         Color="Black"
+                                         Glyph="{x:Static icons:Icons.Flickr}"  Size="25"
+                                         />
+                    </Image.Source>
+                </Image>
+
+
+
+                <Image HorizontalOptions="End" VerticalOptions="EndAndExpand"  Grid.Column="4">
+                    <Image.Source>
+                        <FontImageSource FontFamily="{StaticResource Font}"  
+                                         Color="Black"
+                                         Glyph="{x:Static icons:Icons.Insta}"  Size="25"
+                                         />
+                    </Image.Source>
+                </Image>
+
+
+            </Grid>
+
+
+            <view:Me 
+            x:Name="me"
+            Grid.Row="0"
+            Grid.RowSpan="4"
+            TranslationX="{Binding Source={x:Reference RootPage},Path=Width}" />
+
+
+
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

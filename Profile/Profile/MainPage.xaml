@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:icons="clr-namespace:Profile.Fonts"
+             xmlns:view="clr-namespace:Profile.Views"
+             mc:Ignorable="d"
+             x:Class="Profile.MainPage"
+             x:Name="RootPage">
+    <Grid Padding="0" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" ColumnSpacing="0"
+              BackgroundColor="{StaticResource Blue}" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="{x:Static icons:Icons.menu}" 
+                     TextColor="White"
+                    FontFamily="{StaticResource Font}"  HorizontalOptions="Start" VerticalOptions="Start" FontSize="15"
+                    HeightRequest="40" WidthRequest="40" BackgroundColor="{StaticResource Blue}"  
+                    CornerRadius="20" />
+            <Button  Text="{x:Static icons:Icons.Plus}" FontFamily="{StaticResource Font}" 
+                    HorizontalOptions="End" VerticalOptions="Start"
+                    TextColor="White" Grid.Column="1" HeightRequest="40" WidthRequest="40"
+                    BackgroundColor="{StaticResource Blue}" Clicked="Button_Clicked"
+                     />
+
+            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="50" Padding="0"
+               VerticalOptions="Center" HorizontalOptions="Start" Margin="0,50,0,0">
+                <Image Source="ProfPic.png" Aspect="Fill" WidthRequest="50" HeightRequest="50"/>
+
+            </Frame>
+            <Label Text="Jennifer Wilson" TextColor="White" FontSize="25"  HorizontalOptions="EndAndExpand"
+               VerticalOptions="Center"  HorizontalTextAlignment="Center" Margin="0,0,0,-20" 
+              />
+            <Label Text="UI/UX Designer" TextColor="{StaticResource DeepSkyBlue}" FontSize="Body" VerticalOptions="Center"
+               HorizontalOptions="Center" Margin="52,0,0,-60" HorizontalTextAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="1" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <BoxView BackgroundColor="{StaticResource DeepSkyBlue}"/>
+            <BoxView  Grid.Column="1"
+            BackgroundColor="{StaticResource DeepPink}" />
+            <Label Text="12" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
+            <Label Text="Remaining Tasks " HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White"
+                   Margin="0,35,0,0"/>
+            <Label Text="32" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" FontSize="Large"/>
+            <Label Text="Completed Tasks" HorizontalOptions="CenterAndExpand" Grid.Column="1" VerticalOptions="Center"
+                   TextColor="White" Margin="0,35,0,0"/>
+            <Button Text="{x:Static icons:Icons.Plus}" BackgroundColor="White" FontFamily="{StaticResource Font}" 
+                    Grid.ColumnSpan="2" HeightRequest="60" WidthRequest="60" CornerRadius="30" VerticalOptions="Start"
+                    HorizontalOptions="Center" Margin="0,-35,0,0"/>
+        </Grid>
+        <Grid Grid.Row="2" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+
+            </Grid.RowDefinitions>
+            <Label Text="TODAY" TextColor="Black" FontSize="12" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="End"/>
+            <Button WidthRequest="20" HeightRequest="20" CornerRadius="10" BackgroundColor="{StaticResource DeepPink}" 
+                    Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Start"/>
+
+            <BoxView WidthRequest="0.5"  BackgroundColor="Gray" VerticalOptions="EndAndExpand" Grid.Row="1" 
+                     HorizontalOptions="Start" Margin="10,0,0,0" HeightRequest="30"/>
+
+            <BoxView WidthRequest="0.5"  BackgroundColor="Gray" VerticalOptions="EndAndExpand" Grid.Row="2" 
+                     HorizontalOptions="Start" Margin="10,0,0,0" HeightRequest="30"/>
+
+            <BoxView WidthRequest="0.5"  BackgroundColor="Gray" VerticalOptions="EndAndExpand" Grid.Row="3 " 
+                     HorizontalOptions="Start" Margin="10,0,0,0" HeightRequest="30"/>
+            <BoxView WidthRequest="0.5"  BackgroundColor="Gray" VerticalOptions="EndAndExpand" Grid.Row="4" 
+                     HorizontalOptions="Start" Margin="10,0,0,0" HeightRequest="30"/>
+
+
+
+            <Label Text="Finish Landing page Concept" TextColor="Black" FontSize="12" Grid.Row="1"
+                   HorizontalOptions="Center" HorizontalTextAlignment="Start"/>
+
+            <Button WidthRequest="20" HeightRequest="20"
+                    CornerRadius="10" BackgroundColor="{StaticResource GreenYellow}" 
+                    Grid.Row="2"  HorizontalOptions="Start" VerticalOptions="Start"/>
+            <Label Text="Design app illustration" TextColor="Black" FontSize="12" Grid.Row="2" HorizontalOptions="Center"
+                   HorizontalTextAlignment="Start"/>
+
+            <Button WidthRequest="20" HeightRequest="20" CornerRadius="10" BackgroundColor="{StaticResource DeepSkyBlue}" 
+                    Grid.Row="3"  HorizontalOptions="Start" VerticalOptions="Start"/>
+            <Label Text="Javascript Training" TextColor="Black" FontSize="12" Grid.Row="3" HorizontalOptions="Center" />
+
+            <Button WidthRequest="20" HeightRequest="20" CornerRadius="10" BackgroundColor="{StaticResource Lime}" 
+                    Grid.Row="4"  HorizontalOptions="Start" VerticalOptions="Start"/>
+            <Label Text="Suprise Matt" TextColor="Black" FontSize="12" Grid.Row="4" HorizontalOptions="Center"/>
+        </Grid>
+        <view:Me 
+            x:Name="me"
+            Grid.Row="0"
+            Grid.RowSpan="3"
+            TranslationX="{Binding Source={x:Reference RootPage},Path=Width}" />
+
+
+
+    </Grid>
+    
+
+</ContentPage>

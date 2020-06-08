@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Profile.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" 
+                    x:Key="Font">
+                <On Platform="iOS" Value="icomoon" />
+                <On Platform="Android" Value="icomoon.ttf#Regular" />
+            </OnPlatform>
+            <Color x:Key="DeepPink">#FF1493</Color>
+            <Color x:Key="DeepSkyBlue">#00BFFF</Color>
+            <Color x:Key="Lime">#30FF00</Color>
+            <Color x:Key="GreenYellow">#ADFF2F</Color>
+            <Color x:Key="Blue">#212165</Color>
+            <Color x:Key="BlueViolet">#8A2BE2</Color>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
