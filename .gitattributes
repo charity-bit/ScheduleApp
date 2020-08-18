@@ -4,6 +4,3 @@
 
 
 *.cs text diff=csharp
-#.cs text diff=csharp
-#.cs linguist-detectable=true
-
