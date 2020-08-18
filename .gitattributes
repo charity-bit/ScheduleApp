@@ -1,7 +1,15 @@
 *.cpp linguist-detectable=false
+*.g linguist-detectable=false
 *.java linguist-detectable=false
 *.cs  linguist-language=c#
 *.xaml.cs linguistic-detectable=true
+
+
+
+*.g linguist-language=c#
+* linguist-vendored
+*.cs linguist-vendored=false
+
 
 
 *.cs text diff=c#
