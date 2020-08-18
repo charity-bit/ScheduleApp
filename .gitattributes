@@ -1,6 +1,7 @@
 *.cpp linguist-detectable=false
 *.java linguist-detectable=false
 *.cs linguist-detectable=true
+*.xaml.cs linguistic-detectable=true
 
 
 *.cs text diff=csharp
